@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1001573409523",
+    "project_id": "alert-app-d1368",
+    "storage_bucket": "alert-app-d1368.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001573409523:android:29fffbda66456ffe0d4d86",
+        "android_client_info": {
+          "package_name": "com.example.accidentdetectionsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001573409523-c56okerh2ugc5grvpnnkcretng3nedc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD92IANuq4m8pSDNw9EWY4OIFTO3GWmAV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001573409523-c56okerh2ugc5grvpnnkcretng3nedc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:theme="@style/Theme.AppCompat">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:theme="@style/Theme.AppCompat"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border">
+
+            <RelativeLayout
+                android:id="@+id/top_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/vehicleNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="2dp"
+                    android:text="Question No. 34"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/prblm_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vehicleNo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+
+                <TextView
+                    android:id="@+id/vehicleDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prblm_rel"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_baseline_format_align_right_24"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawableTint="@color/purple_700"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/extraDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vehicleDetails"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_baseline_format_align_right_24"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawableTint="@color/purple_700"
+                    android:text="extraDetails"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/questionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/extraDetails"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_baseline_format_align_right_24"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawableTint="@color/purple_700"
+                    android:text="Question Value: True, False"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bottom_rel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/top_rel"
+                android:layout_marginTop="15dp"
+                android:background="@color/purple_700"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:id="@+id/update"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_done"
+                    android:drawableLeft="@drawable/ic_done"
+                    android:drawableTint="@color/purple_700"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="  Approve  "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/reject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_direction"
+                    android:drawableLeft="@drawable/ic_direction"
+                    android:drawableTint="@color/purple_700"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="   Reject  "
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

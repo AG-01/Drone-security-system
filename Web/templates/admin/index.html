@@ -1,0 +1,154 @@
+{% extends 'admin/master.html' %}
+
+{% block head %}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+    }
+
+    .dashboard-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-card {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        width: 20%;
+        min-width: 200px;
+        text-align: center;
+        margin: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .dashboard-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .dashboard-icon {
+        font-size: 64px;
+        margin-bottom: 25px;
+        color: #4a90e2;
+    }
+
+    .dashboard-count {
+        font-size: 48px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-label {
+        font-size: 18px;
+        color: #7f8c8d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .welcome-section {
+        text-align: center;
+        margin: 10px 0;
+        padding: 0 20px;
+    }
+
+    .welcome-section h1 {
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .btn-manage {
+        margin: 10px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-manage:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logout-section {
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 60px;
+    }
+
+    .btn-logout {
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-logout:hover {
+        background-color: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(192, 57, 43, 0.3);
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1><b>AeroAlert -</b> Immediate action from the skies.</h1>
+</center>
+<div class="dashboard-container">
+    <div class="dashboard-card">
+        <i class="fas fa-user-shield dashboard-icon"></i>
+        <div class="dashboard-count">{{ admin_count }}</div>
+        <div class="dashboard-label">Admin Users</div>
+    </div>
+    <div class="dashboard-card">
+        <i class="fas fa-user-tie dashboard-icon"></i>
+        <div class="dashboard-count">{{ guard_count }}</div>
+        <div class="dashboard-label">Security Guards</div>
+    </div>
+    <!-- <div class="dashboard-card">
+        <i class="fas fa-car dashboard-icon"></i>
+        <div class="dashboard-count">{{ vehicle_count }}</div>
+        <div class="dashboard-label">Registered Vehicles</div>
+    </div> -->
+    <div class="dashboard-card">
+        <i class="fas fa-clipboard-list dashboard-icon"></i>
+        <div class="dashboard-count">{{ log_count }}</div>
+        <div class="dashboard-label">Alert Logs</div>
+    </div>
+</div>
+
+
+
+<div class="welcome-section">
+    <p>
+        <a class="btn btn-primary btn-manage" href="{{ url_for('adminuser.index_view') }}">Manage Admin Users</a>
+        <a class="btn btn-success btn-manage" href="{{ url_for('securityguard.index_view') }}">Manage Security Guards</a>
+        <a class="btn btn-danger btn-manage" href="{{ url_for('alertlog.index_view') }}">Manage Alert Logs</a>
+
+    </p>
+</div>
+<!-- 
+<div class="logout-section">
+    <form method="get" action="{{ url_for('admin.logout_view') }}">
+        <button type="submit" class="btn btn-danger btn-logout">Logout</button>
+    </form>
+</div> -->
+{% endblock %}
